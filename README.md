@@ -28,9 +28,12 @@ npm run lint
 - [x] Click to mark a todo as done.
 - [x] Clean up todos that are done.
 - [x] Use `localStorage` to store data.
-- [ ] Todo creation page.
+- [x] Todo creation page.
 
 ## Pages
 
 - `/` Todos list.
 - `/new` Create new todo.
+
+## Deploy
+- [TodoApp](https://dulcet-panda-5a1b41.netlify.app/new)
