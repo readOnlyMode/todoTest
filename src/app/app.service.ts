@@ -38,4 +38,12 @@ export class AppService {
       },
     });
   }
+
+  public save(todo: Todo) {
+    const todos: Todo[] = JSON.parse(localStorage.getItem(this.todosKey) ?? "[]");
+
+    todos.push(todo)
+
+    this.todos.next(todos);
+  }
 }

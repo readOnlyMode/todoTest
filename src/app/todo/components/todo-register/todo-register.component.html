@@ -1,0 +1,51 @@
+<form class="form" [formGroup]="formGroup">
+  <div class="input-group mb-3">
+    <textarea
+      class="form__textarea form-control"
+      formControlName="title"
+      placeholder="description"
+      aria-label="With textarea"
+    ></textarea>
+  </div>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text">Task due date</span>
+    <input
+      class="form-control"
+      formControlName="date"
+      type="date"
+      placeholder="enter time"
+      aria-label="task time"
+    />
+  </div>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text">Select priority</span>
+    <select
+      class="form-select"
+      formControlName="priority"
+      aria-label="Select task priority"
+    >
+      <option value="{{ todoPriority.LOW }}">Low</option>
+      <option value="{{ todoPriority.NORMAL }}">Normal</option>
+      <option value="{{ todoPriority.HIGH }}">High</option>
+    </select>
+  </div>
+
+  <div class="d-flex justify-content-between">
+    <div aria-label="form error">
+      <p *ngIf="showErrorMessage" class="form__error fs-6 fw-light">
+        *Please fill in all the fields
+      </p>
+    </div>
+
+    <button
+      (click)="create()"
+      class="btn btn-success"
+      [disabled]="!formGroup.valid"
+      type="button"
+    >
+      <i class="bi bi-plus-lg"></i> Create Task
+    </button>
+  </div>
+</form>
