@@ -36,4 +36,4 @@ npm run lint
 - `/new` Create new todo.
 
 ## Deploy
-- [TodoApp](https://dulcet-panda-5a1b41.netlify.app/new)
+- [TodoApp](https://dulcet-panda-5a1b41.netlify.app/)
